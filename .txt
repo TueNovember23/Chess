@@ -1,0 +1,66 @@
+Vector {
+	vertical, horizontal
+	{up, down, left, right, upleft, upright, downleft, downright}
+}
+
+Position {
+	row, column
+	+ vector = new Position
+}
+
+Move (abstract) {
+	from, to
+	* Execute(Board) (virtual)
+	
+	NormalMove {
+		
+	}
+	
+	Promotion {
+	
+	}
+
+	EnPassant {
+
+	}
+
+	CastlingQueenSide {
+	
+	}
+
+	CastlingKingSide {
+	
+	}
+}
+
+
+Piece (abstract) {
+	color, type, hasmoved, movedirections
+	* GetMoveInDirection(Board, piecePosition, direction) => All moves in direction
+	* GetMoveInDirections(Board, piecePosition) => All moves in movedDirections
+	* GetMoves (abstract)
+
+	Pawn {
+	
+	}
+
+	Rook {
+	
+	}
+
+	Knight {
+	
+	}
+
+	Bishop {
+	
+	}
+
+	Queen {
+	
+	}
+
+	King {
+	
+	}
+}
